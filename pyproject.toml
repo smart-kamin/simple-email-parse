@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simple-email-parse"
+version = "0.1"
+authors = [
+    {name = "HalPerson", email = "vkolebcev@yandex.ru"}
+]
+description = "Библиотека для парсинга email переписки"
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["email", "parser", "html", "conversation", "mail", "message"]
+license = {text = "MIT"}
+classifiers = [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Communications :: Email",
+    "Topic :: Text Processing :: Markup :: HTML",
+]
+
+dependencies = [
+    "beautifulsoup4>=4.9.0",
+    "lxml>=4.6.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/smart-kamin/simple-email-parse"
+Repository = "https://github.com/smart-kamin/simple-email-parse"
+Issues = "https://github.com/smart-kamin/simple-email-parse/issues"
+
+[tool.black]
+line-length = 114
+target-version = ["py311"]
+
+[tool.ruff]
+line-length = 114
+target-version = "py311"
+
+[tool.ruff.lint]
+# Набор правил: ошибки, варнинги, bugbear и импорт-правила (isort-подобные)
+select = ["E", "F", "W", "B", "I"]
+ignore = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test*"]

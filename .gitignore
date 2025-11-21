@@ -1,0 +1,11 @@
+.venv/
+.idea/
+__pycache__/
+*.pyc
+sample_before.html
+sample_after.html
+
+# Выходные файлы тестов
+samples/*_output.html
+samples/*_output.json
+output_*.html
