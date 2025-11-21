@@ -3,7 +3,7 @@ import re
 
 import bs4
 
-import header_adapters
+from . import header_adapters
 
 
 class HtmlProcessor:

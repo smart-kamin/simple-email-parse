@@ -3,8 +3,8 @@ import pathlib
 
 import bs4
 
-from html_processor import HtmlProcessor
-from json_processor import JsonProcessor, Contact
+from .html_processor import HtmlProcessor
+from .json_processor import JsonProcessor, Contact
 
 
 class EmailParser:
