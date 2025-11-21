@@ -260,8 +260,6 @@ class HtmlProcessor:
         Проверяет, является ли обернутый контент заголовком.
         Если НЕ заголовок - не оборачивает.
         """
-        import header_adapters
-
         sequences_to_wrap = []
 
         for parent in self.soup.find_all():
