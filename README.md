@@ -11,7 +11,7 @@ pip install simple-email-parse
 ## Быстрый старт
 
 ```python
-from email_parser import EmailParser
+from simple_email_parser import EmailParser
 
 parser = EmailParser("email.htm", remove_img=True)
 
@@ -285,7 +285,7 @@ Subject: Test
 
 ### Базовое использование
 ```python
-from email_parser import EmailParser
+from simple_email_parser import EmailParser
 
 parser = EmailParser("email.htm")
 messages = parser.get_dict()
@@ -304,7 +304,7 @@ json_output = parser.get_json()
 
 ### Использование с основным контактом
 ```python
-from json_processor import Contact
+from simple_email_parser import EmailParser, Contact
 
 main_contact = Contact(email="me@example.com", name="My Name")
 parser = EmailParser("email.htm", main_contact=main_contact)
@@ -314,8 +314,7 @@ messages = parser.get_dict()
 
 ### Раздельное использование процессоров
 ```python
-from html_processor import HtmlProcessor
-from json_processor import JsonProcessor
+from simple_email_parser import HtmlProcessor, JsonProcessor
 
 html_proc = HtmlProcessor("email.htm", remove_img=True)
 html_proc.process()
